@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfilemaven --tag my-dockersuri/maven-web-app .:$(date +%s)
+      run: docker build -t --name maven-web-app -p 8080:8080  dockersuri/maven-web-app .:$(date +%s)
