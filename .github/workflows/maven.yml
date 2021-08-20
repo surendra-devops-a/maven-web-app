@@ -20,5 +20,5 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: tomcat deploy
-      run: curl -v -u surendra-99:5680145s -T /home/runner/work/maven-web-app/maven-web-app/target/maven-web-application.war
+      run: curl -v -u surendra-99:5680145s -T /home/runner/work/maven-web-app/maven-web-app/target/maven-web-application.war 'http://ec2-3-108-228-153.ap-south-1.compute.amazonaws.com:8080//manager/text/deploy?path=/maven-web-app'
 
