@@ -1,7 +1,7 @@
 # This workflow will build a Java project with Maven
 # For more information see: https://help.github.com/actions/language-and-framework-guides/building-and-testing-java-with-maven
 
-name: Java CI with Maven
+name: deploy to tomcat
 
 on: [push]
 
@@ -19,3 +19,6 @@ jobs:
         distribution: 'adopt'
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: tomcat deploy
+      run: curl -v -u surendra-99:5680145s -T /home/runner/work/maven-web-app/maven-web-app/target/maven-web-application.war
+
